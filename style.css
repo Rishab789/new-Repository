@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+:root{
+    --clr:#222327;
+}
+
+.container{}
+   
+  
+.nav{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:7rem;
+    background-color: rgb(198, 255, 190);
+    border-radius: 10px;
+    
+}
+
+/* Nav Bar Section */
+
+
+/* Another section */
+.nav .logo{
+    position: absolute;
+    left:8rem;
+
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    
+    
+}
+
+ ul li{
+    list-style-type: none;  
+}
+
+ul li a{
+   text-decoration: none;
+ }
+    
+ .menuBar ul li a .active{
+   font: bold;
+  }
+
+  .hero-section{
+    height:100vh;
+    width:100vw;
+    background-image: url('./images/Hero\ Section1.png');
+    display: flex;
+    justify-content: center;
+   }
+  
+
+  .hero-section button {
+    position: absolute;
+    bottom: -1px;
+    left:600px; 
+    padding:15px 40px; 
+    border-radius: 5px;
+    border:2px solid #ffffff;
+    background-color: rgb(249, 255, 255);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+    
+}
+
+.hero-section button .bx{
+    /* font-size: 30px; */
+     
+  
+   }
+
+     .hero-section button:hover{
+        background-color: transparent;
+        color:#ffffff;
+        border:2px solid #ffffff;
+        transition-duration: 0.2s;
+      
+
+     }
+
+    .main-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100%;
+        width:100%;
+    }
+
+    .left-img{
+        object-fit: cover;
+        width:50%;
+
+    }
+
+    .right-content .heading {
+
+        display: flex;
+        margin: 10px;
+        gap:10px;
+        
+    }
+    .right-content .heading .circle{
+        height:40px;
+        width:40px;
+        border-radius: 50%;
+        background: blue;
+        position: absolute;
+        /* top:1px; */
+    }
+
+    .right-content h4{
+       
+    }
+
+    .right-content{
+        width:50%;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+
+
+
+    }
+
+    .about{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100%;
+        width:100%;
+    }
+
+    .left-content{
+        width:50%;
+
+
+    }
+
+    .right-image{
+        width:50%;
+
+    }
+  
+
