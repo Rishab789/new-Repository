@@ -6,6 +6,7 @@
     <title>Adible</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
    
 </head>
 <body>
@@ -52,7 +53,7 @@
     <!-- Main Section -->
     <section class="main-section">
         <div class="left-img">
-            <img src="./images/Contact-us.svg" alt="">
+            <img src="./images/Contact-us.svg" alt="" class="image">
            
         </div>
         <div class="right-content">
@@ -69,26 +70,69 @@
     <!-- About US Section -->
     <section class="about">
         <div class="left-content">
-            <h2>About US</h2>
+            <h2>About Us</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident ullam necessitatibus ipsam animi nobis quas facere iure distinctio cum, porro, consequuntur voluptatem quisquam consequatur enim. Rem, quibusdam amet impedit labore vel accusamus pariatur, ipsam, dolores quod atque id! Enim, itaque exercitationem quo nobis molestiae sequi blanditiis tempora, velit odit expedita natus totam quam eveniet adipisci voluptatem! Repellat temporibus veniam quam, corrupti harum odio officia obcaecati atque, repudiandae dolores ea nam placeat eligendi accusantium commodi.</p>
 
         </div>
         <div class="right-img">
-            <img src="./images/About-Us.svg" alt="">
+            <img src="./images/About-Us.svg" alt="" class="rightImage">
         </div>
 
     </section>
 
     <!-- Contact US Section -->
     <section class="contact">
+        <form onSubmit="sendEmail(); reset(); return false">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone no." required>
+            <textarea name="" id="message"  rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Send</button>
+
+
+        </form>
+
+
 
     </section>
 
     <!-- Footer Section -->
-    <section class="footer">
+    <footer>
 
-    </section>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
+                <a href="#"><i class='bx bxl-twitter' ></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+            </div>
+    
+            <div class="footerNav">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Privacy Policies</a></li>
+    
+    
+    
+    
+                </ul>
+            </div>
+    
+           
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">Prakash</span></p>
+        </div>  
+
+    </footer>
    
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
