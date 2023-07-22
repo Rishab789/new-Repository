@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adible</title>
     <link rel="stylesheet" href="style.css">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("JVeDxkpLrch03W5dM");
+   })();
+</script>
    
 </head>
 <body>
@@ -14,17 +22,17 @@
         <!-- <div class="container"> -->
 
             <!-- Navigation Bar Section -->
-            <nav class="nav">
+            <nav class="nav nav-class">
             
                 <div class="logo">
-                    Adible
+                    freezoAd
                 </div>
                 <!-- <div class="menuBar"> --> 
                     <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#aboutus">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" id="Home">Home</a></li>
+                    <li><a href="#services" id="Services">Services</a></li>
+                    <li><a href="#aboutus" id="About">About Us</a></li>
+                    <li><a href="#contact" id="Contact">Contact</a></li>
                     </ul>
                    
                    
@@ -35,15 +43,40 @@
 
     <!-- Hero Section -->
 
-    <section class="hero-section">
+    <section class="hero-section" id="home" >
         <!-- <img src="images/Hero Section1.png" alt="" class="hero-img"> -->
         
 
        
-            <button>
-                Our Services
+            <button onClick="serviceButton()" class="serviceBtn">Our Services
+               
                  <i class='bx bx-right-arrow-alt'></i>
             </button>
+
+            <div  class="top-contact" >
+                <h3>GET IN TOUCH</h3>
+                <input type="text" id="fullName_top" placeholder="*Your Name" required>
+                <input type="email" id="email_id_top" placeholder="*Email id" required>
+                <input type="text" id="phone_top" placeholder="*Phone no." required>
+                <textarea name="" id="message_top"  rows="4" placeholder="*How can we help you?"></textarea>
+                <div class="top-contact-btn" type="submit" onClick="sendMail(true)">
+                    Send
+                </div>
+                <!-- onClick="sendMail(); reset(); return false;" -->
+                
+            </div>
+
+            <!-- <section class="contact" id="contact">
+                <form  > 
+                    <h3>GET IN TOUCH</h3>
+                    <input type="text" id="fullName" placeholder="Your Name" required>
+                    <input type="email" id="email_id" placeholder="Email id" required>
+                    <input type="text" id="phone" placeholder="Phone no." required>
+                    <textarea name="" id="message"  rows="4" placeholder="How can we help you?"></textarea>
+                    <button type="submit" onClick="sendMail(); reset(); return false;" class="btn">Send</button>
+        
+        
+                </form> -->
             
        
 
@@ -51,7 +84,7 @@
     </section>
     
     <!-- Main Section -->
-    <section class="main-section">
+    <section class="main-section" id="services">
         <div class="left-img">
             <img src="./images/Contact-us.svg" alt="" class="image">
            
@@ -68,10 +101,10 @@
     </section>
 
     <!-- About US Section -->
-    <section class="about">
+    <section class="about" id="aboutus">
         <div class="left-content">
             <h2>About Us</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad provident ullam necessitatibus ipsam animi nobis quas facere iure distinctio cum, porro, consequuntur voluptatem quisquam consequatur enim. Rem, quibusdam amet impedit labore vel accusamus pariatur, ipsam, dolores quod atque id! Enim, itaque exercitationem quo nobis molestiae sequi blanditiis tempora, velit odit expedita natus totam quam eveniet adipisci voluptatem! Repellat temporibus veniam quam, corrupti harum odio officia obcaecati atque, repudiandae dolores ea nam placeat eligendi accusantium commodi.</p>
+            <p>Our mission is to elevate your business to new heights by harnessing the unparalleled potential of Facebook advertising. With a wealth of expertise and cutting-edge strategies, we specialize in creating powerful, targeted campaigns that maximize your ROI and drive exponential growth. Our success lies in securing the right clients for whom we craft bespoke advertising solutions tailored to their unique needs. Partner with us today and watch as your business soars to the forefront of the digital landscape, generating unparalleled engagement and conversions through the unparalleled reach of Facebook ads. Let's transform your vision into a thriving reality!</p>
 
         </div>
         <div class="right-img">
@@ -79,20 +112,22 @@
         </div>
 
     </section>
+    
 
     <!-- Contact US Section -->
-    <section class="contact">
-        <form onSubmit="sendEmail(); reset(); return false">
+    <section class="contact" id="contact">
+        <form  onsubmit="return myfun()"> 
             <h3>GET IN TOUCH</h3>
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Email id" required>
-            <input type="text" id="phone" placeholder="Phone no." required>
-            <textarea name="" id="message"  rows="4" placeholder="How can we help you?"></textarea>
-            <button type="submit">Send</button>
+            <input type="text" id="fullName" placeholder="*Your Name" required>
+            <input type="email" id="email_id" placeholder="*Email id" required>
+            
+            <input type="text" id="phone" placeholder="*Phone no."  class="phoneCheck" required><span id="msg"></span>
+            <textarea name="" id="message"  rows="4" placeholder="*How can we help you?"></textarea>
+            <button   class="btn" type="submit" onClick="sendMail()">Send</button>
 
 
         </form>
-
+          
 
 
     </section>
@@ -102,19 +137,19 @@
 
         <div class="footerContainer">
             <div class="socialIcons">
-                <a href="#"><i class='bx bxl-facebook-circle' ></i></a>
-                <a href="#"><i class='bx bxl-twitter' ></i></a>
-                <a href="#"><i class='bx bxl-instagram' ></i></a>
-                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100094991025182&is_tour_completed=true"><i class='bx bxl-facebook-circle' ></i></a>
+                <!-- <a href="#"><i class='bx bxl-twitter' ></i></a> -->
+                <a href="https://www.instagram.com/freezoad/"><i class='bx bxl-instagram' ></i></a>
+                <!-- <a href="#"><i class='bx bxl-linkedin-square' ></i></a> -->
             </div>
     
             <div class="footerNav">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">About us</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li><a href="">Privacy Policies</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#aboutus">About us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policies</a></li>
     
     
     
@@ -125,15 +160,15 @@
            
         </div>
         <div class="footerBottom">
-            <p>Copyright &copy;2023; Designed by <span class="designer">Prakash</span></p>
+            <p>Copyright &copy;2023 Designed by <span class="designer">Prakash</span></p>
         </div>  
 
     </footer>
     
    
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+ 
 
-   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   
     <script src="index.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
