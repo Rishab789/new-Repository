@@ -118,10 +118,10 @@ function homebtn(){
 
 const redBtn = document.querySelector(".redBtn");
 function redButton(){
-  window.location="http://127.0.0.1:5500/index.html#contact";
+  window.location="https://freezoad.netlify.app//index.html#contact";
 }
  function blackButton(){
-  window.location="http://127.0.0.1:5500/index.html";
+  window.location="https://freezoad.netlify.app/index.html";
 
  }
 
