@@ -104,7 +104,9 @@ const serviceBtn = document.querySelector(".serviceBtn");
 const btnP = document.querySelector(".btnP");
 
 function serviceButton(){
-  window.location="http://127.0.0.1:5500/services.html";
+  window.location="https://freezoad.netlify.app/services.html";
+  // window.location="http://127.0.0.1:5500/services.html";
+  // https://freezoad.netlify.app
 
 }
 
