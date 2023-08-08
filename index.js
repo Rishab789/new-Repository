@@ -40,17 +40,6 @@
 
  });
 
-  //  const topButton = document.querySelector(".top-contact-btn");
-  //  topButton.addEventListener("click" ,  sendMail);
-
-//  const lowButton = document.querySelector(".btn");
-//  lowButton.addEventListener("click" , sendMail);
-
-
-
-
-
- 
 function sendMail(isTop = false){
  
   var params = {
@@ -105,8 +94,7 @@ const btnP = document.querySelector(".btnP");
 
 function serviceButton(){
   window.location="https://freezoad.netlify.app/services.html";
-  // window.location="http://127.0.0.1:5500/services.html";
-  // https://freezoad.netlify.app
+  
 
 }
 
@@ -125,25 +113,5 @@ function redButton(){
 
  }
 
-
-//  let sections = document.querySelectorAll(".section");
-//  let navLinks = document.querySelector("nav ul li a");
-
-//  window.onscroll = () =>{
-//   sections.forEach(sec =>{
-//     let top = window.scrollY;
-//     let offset = sec.offsetTop;
-//     let height = sec.offsetHeight;
-//     let id = sec.getAttribute('id');
-//     if(top >= offset && top < offset + height){
-//       navLinks.forEach(links =>{
-//         links.classList.remove("active");
-//         document.querySelector("nav ul li a [href*=' + id + ']").classList.add("active");
-//       })
-
-//     };
-//   });
-//  };
- 
 
 
