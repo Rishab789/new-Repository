@@ -4,7 +4,7 @@
  const contact = document.getElementById("Contact");
 
 
- home.addEventListener("click" , ()=>{
+  home.addEventListener("click" , ()=>{
   home.classList.add("active");
   services.classList.remove("active");
   aboutus.classList.remove("active");
@@ -14,7 +14,7 @@
 
  });
 
- services.addEventListener("click" , ()=>{
+  services.addEventListener("click" , ()=>{
   services.classList.add("active");
   aboutus.classList.remove("active");
   contact.classList.remove("active");
@@ -41,6 +41,7 @@
  });
 
 function sendMail(isTop = false){
+  debugger;
  
   var params = {
     from_name: isTop ? document.getElementById('fullName_top').value : document.getElementById('fullName').value,
@@ -57,13 +58,15 @@ function sendMail(isTop = false){
   }
   
   else {
-     emailjs.send("service_0ci8bji" , "template_pqsumrd" , params).then(function(res){
-      alert("message sent successfully");  
+     
    
      isTop ? document.getElementById('fullName_top').value = "" : document.getElementById('fullName').value = "",
      isTop ? document.getElementById('email_id_top').value = "": document.getElementById('email_id').value ="",
      isTop ? document.getElementById('phone_top').value = "" : document.getElementById('phone').value = "",
      isTop ? document.getElementById('message_top').value = "" : document.getElementById('message').value= ""
+
+     emailjs.send("service_0ci8bji" , "template_pqsumrd" , params).then(function(res){
+      alert("message sent successfully");  
       
       
     });
@@ -79,7 +82,6 @@ function myfun(){
     sendMail();
 
   }else{
-
     document.getElementById("msg").innerHTML="Invalid Password";
     return false;
     

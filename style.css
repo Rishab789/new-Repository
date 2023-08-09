@@ -163,6 +163,11 @@ ul li a{
         
         
     }
+    .right-content{
+        position: absolute;
+        right:200px;
+        
+    }
 
     .right-content .heading {
 
@@ -929,6 +934,7 @@ ul li a{
 
          .main-section{
             display: flex;
+            flex-direction: column;
             justify-content: space-between;
             align-items: center;
             height:100%;
@@ -937,7 +943,7 @@ ul li a{
             /* margin:0 auto; */
            
         }
-        .mainSection{
+        /* .mainSection{
             display:flex;
             flex-direction: column;
             
@@ -945,7 +951,7 @@ ul li a{
             /* top:-10px; */
             
     
-        }
+        } */
     
         .left-img{
             width:100%;
@@ -965,6 +971,7 @@ ul li a{
             width:30rem;
             margin-top: 1rem;
             margin-top:0 auto;
+            padding:10%;
         }
     
         .right-content {
@@ -973,8 +980,9 @@ ul li a{
             margin: 10px;
             gap:10px;
             margin-top:2rem;
-            margin-left: 1rem;
+            margin-left: 7rem;
             width:100%;
+            
            
             
             
